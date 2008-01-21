@@ -7,8 +7,8 @@ use ExtUtils::MakeMaker;
 my $have_fieldhash = eval { require Hash::Util::FieldHash };
 
 WriteMakefile(
-	NAME         => '',
-	VERSION_FROM => '',
+	NAME         => 'Hash::Util::FieldHash::Compat',
+	VERSION_FROM => 'lib/Hash/Util/FieldHash/Compat.pm',
 	INSTALLDIRS  => 'site',
 	SIGN         => 1,
 	PL_FILES     => { },
