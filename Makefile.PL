@@ -15,8 +15,8 @@ WriteMakefile(
 	PREREQ_PM    => {
 		'Test::use::ok' => 0,
 		( $have_fieldhash ? () : (
-			'Tie::RefHash::Weak' => 0,
-			'Tie::RefHash' => 0,
+			'Tie::RefHash::Weak' => '0.08',
+			'Tie::RefHash' => '1.38',
 		)),
 	},
 );
