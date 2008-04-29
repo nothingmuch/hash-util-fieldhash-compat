@@ -1,0 +1,6 @@
+0.02
+	- Tie::RefHash related dependencies changed
+	- ::Compat imports all of Hash::Util::FielDhash on 5.10 so that fully qualified calls work
+
+0.01
+	- Initial release
