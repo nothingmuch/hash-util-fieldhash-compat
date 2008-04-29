@@ -12,7 +12,7 @@ use if  REAL_FIELDHASH() => "Hash::Util::FieldHash" => ":all";
 
 use if !REAL_FIELDHASH() => 'Hash::Util::FieldHash::Compat::Heavy';
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub import {
 	if ( REAL_FIELDHASH ) {
