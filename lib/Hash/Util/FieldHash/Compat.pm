@@ -7,10 +7,14 @@ use warnings;
 
 use constant REAL_FIELDHASH => do { local $@; eval { require Hash::Util::FieldHash } };
 
-# if we have it, allow fully qualified calls to ::Compat
-use if  REAL_FIELDHASH() => "Hash::Util::FieldHash" => ":all";
-
-use if !REAL_FIELDHASH() => 'Hash::Util::FieldHash::Compat::Heavy';
+BEGIN {
+	if ( REAL_FIELDHASH ) {
+		require Hash::Util::FieldHash;
+		Hash::Util::FieldHash->import(":all");
+	} else {
+		require Hash::Util::FieldHash::Compat::Heavy;
+	}
+}
 
 our $VERSION = "0.02";
 
